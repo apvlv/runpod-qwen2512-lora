@@ -6,7 +6,7 @@ FROM runpod/worker-comfyui:5.5.1-base
 # Unknown registry nodes (could not be resolved automatically): MarkdownNote, Note, Note, MarkdownNote
 
 # download models into comfyui
-# RUN comfy model download --url https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2512_bf16.safetensors --relative-path models/diffusion_models --filename qwen_image_2512_bf16.safetensors
+RUN comfy model download --url https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2512_bf16.safetensors --relative-path models/diffusion_models --filename qwen_image_2512_bf16.safetensors
 RUN comfy model download --url https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors --relative-path models/text_encoders --filename qwen_2.5_vl_7b_fp8_scaled.safetensors
 RUN comfy model download --url https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors --relative-path models/vae --filename qwen_image_vae.safetensors
 RUN comfy model download --url https://transfer.apavlov.net/-tryraGpUGT/qwen_2512_GP_4x6_deluxe_2500s.safetensors --relative-path models/loras --filename qwen_2512_GP_4x6_deluxe_2500s.safetensors
